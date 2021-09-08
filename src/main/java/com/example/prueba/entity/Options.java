@@ -8,12 +8,13 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "option")
-public class Option {
+@Table(name = "options")
+public class Options {
 
     @Id
     @Column(name = "idoption", length = 8)
-    String idOption;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long idOption;
 
     @JoinColumn(name = "description")
     String description;
@@ -26,7 +27,7 @@ public class Option {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Question question;
 
-    public Option() {
+    public Options() {
     }
 
 

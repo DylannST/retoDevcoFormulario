@@ -15,7 +15,7 @@ public class Form {
     @Id
     @Column(name = "idForm", length = 8)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    String idForm;
+    Long idForm;
 
     @JoinColumn(name = "description")
     String description;

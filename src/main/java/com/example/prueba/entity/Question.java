@@ -7,6 +7,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.util.Set;
+
 @Data
 @Entity
 @Table(name = "question")
@@ -14,7 +15,8 @@ public class Question {
 
     @Id
     @Column(name = "idQuestion", length = 8)
-    String idQuestion;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long idQuestion;
 
     @JoinColumn(name = "description")
     String description;
@@ -28,7 +30,7 @@ public class Question {
     }
 
     @OneToMany(mappedBy = "question", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-    private Set<Option> options;
+    private Set<Options> options;
 
 
 }

@@ -12,9 +12,9 @@ import java.util.Set;
 public class Candidate {
 
     @Id
-    @Column(name = "cedula", length = 10)
+    @Column(name = "id", length = 10)
     String id;
-    @JoinColumn(name = "nombre")
+    @JoinColumn(name = "name")
     String name;
 
 
