@@ -18,24 +18,23 @@ public class CandidateForm {
     @JoinColumn(name = "promedio")
     Long media;
 
-    @JoinColumn(name = "state")
-    boolean state;
+//    @JoinColumn(name = "state")
+//    boolean stateR;
 
     @Id
-    @JoinColumn(name = "idForm")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    @JoinColumn(name = "idForm", unique = true, nullable = false)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Form form;
 
     @Id
-    @JoinColumn(name = "idCandidate")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    @JoinColumn(name = "idCandidate", unique = true, nullable = false)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Candidate candidate;
 
     public CandidateForm() {
     }
-
 
 
 }

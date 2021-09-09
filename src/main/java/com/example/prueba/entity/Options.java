@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Options {
 
     @Id
-    @Column(name = "idoption", length = 8)
+    @Column(name = "idoption")
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long idOption;
 

@@ -12,14 +12,14 @@ import java.util.Set;
 public class Candidate {
 
     @Id
-    @Column(name = "id", length = 10)
-    String id;
+    @Column(name = "id")
+    Long id;
     @JoinColumn(name = "name")
     String name;
 
 
-    @OneToMany(mappedBy = "candidate", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-    private Set<CandidateForm> candidateForm;
+//    @OneToMany(mappedBy = "candidate", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+//    private Set<CandidateForm> candidateForm;
 
     public Candidate() {
     }
