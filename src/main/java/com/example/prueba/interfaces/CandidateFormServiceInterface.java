@@ -8,7 +8,7 @@ public interface CandidateFormServiceInterface {
 
     void saveCandidateForm(CandidateForm candidateForm);
 
-    Long getMedia(Long idCandidate, Long idform);
+
 
     List<Object> getFormOfACandidate(CandidateForm candidateForm);
 }

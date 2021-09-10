@@ -26,9 +26,7 @@ public class CandidateFormService implements CandidateFormServiceInterface {
 
     }
 
-    public Long getMedia(Long idCandidate, Long idform) {
-        return candidateFormRepository.getMedia(idCandidate, idform);
-    }
+
 
     public List<Object> getFormOfACandidate(CandidateForm candidateForm) {
         return candidateFormRepository.getFormOfACandidate(

@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 public interface OptionRepository extends CrudRepository<Options, Long> {
     @Modifying
@@ -16,4 +17,7 @@ public interface OptionRepository extends CrudRepository<Options, Long> {
             "id_question=?4", nativeQuery = true)
     void updateOptions(String description, boolean success, Long idOption, Long idQuestion);
 
+    @Query(value = "select * from options as op\n" +
+            "WHERE op.id_question=?1", nativeQuery = true)
+    List<Object> getOptions(Long idQuestion);
 }

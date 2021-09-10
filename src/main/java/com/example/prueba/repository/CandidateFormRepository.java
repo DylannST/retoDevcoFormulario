@@ -10,8 +10,7 @@ import java.util.List;
 
 public interface CandidateFormRepository extends CrudRepository<CandidateForm, Long> {
 
-    @Query(value = "select media from candidate_form WHERE id_candidate=?1 and id_form=?2", nativeQuery = true)
-    Long getMedia(Long idCandidate, Long idForm);
+
 
     @Query(value = "SELECT q.description as Question,op.description as optionTrue from candidate as ca\n" +
             "INNER JOIN candidate_form as cf on cf.id_candidate=ca.id\n" +
@@ -26,7 +25,7 @@ public interface CandidateFormRepository extends CrudRepository<CandidateForm, L
     @Query(value = "INSERT INTO candidate_form (media,id_form, id_candidate)\n" +
             "VALUES (?1, ?2, ?3)",
             nativeQuery = true)
-    void insert(Long media, /*boolean state,*/ Long idForm, Long idCandidate);
+    void insert(Long media, Long idForm, Long idCandidate);
 
 
 }

@@ -28,4 +28,24 @@ public class OptionsService implements OptionsServiceInterface {
                 options.getQuestion().getIdQuestion()
         );
     }
+
+    public int getMedia(List<Options> options) {
+        Options optionsOri;
+        int valorTotal = 0;
+        for (Options option : options) {
+            optionsOri = optionRepository.findById(option.getIdOption()).get();
+            if (optionsOri.isSuccess()) {
+                valorTotal += 4;
+            } else {
+                valorTotal += -1;
+            }
+        }
+
+
+        return (valorTotal / options.size());
+    }
+
+    public List<Object> getOptions(Long idQuestion) {
+        return optionRepository.getOptions(idQuestion);
+    }
 }

@@ -20,10 +20,7 @@ public class CandidateFormController {
         candidateFormService.saveCandidateForm(candidateForm);
     }
 
-    @GetMapping("api/candidateForm/{idCandidate}/{idform}")
-    public Long getMedia(@PathVariable Long idCandidate, @PathVariable Long idform) {
-        return candidateFormService.getMedia(idCandidate, idform);
-    }
+
 
 
     @GetMapping("api/candidateForm")
