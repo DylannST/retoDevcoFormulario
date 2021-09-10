@@ -48,4 +48,13 @@ public class OptionsService implements OptionsServiceInterface {
     public List<Object> getOptions(Long idQuestion) {
         return optionRepository.getOptions(idQuestion);
     }
+
+    public List<Options> getRightandWrongOptions(List<Options> options) {
+
+        options.forEach(x -> {
+            Options option = optionRepository.findById(x.getIdOption()).get();
+            x.setSuccess(option.isSuccess());
+        });
+        return options;
+    }
 }

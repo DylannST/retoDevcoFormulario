@@ -20,9 +20,6 @@ public class CandidateFormController {
         candidateFormService.saveCandidateForm(candidateForm);
     }
 
-
-
-
     @GetMapping("api/candidateForm")
     public List<Object> getFormOfACandidate(@RequestBody CandidateForm candidateForm) {
         return candidateFormService.getFormOfACandidate(candidateForm);

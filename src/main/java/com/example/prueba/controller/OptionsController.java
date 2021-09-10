@@ -2,6 +2,7 @@ package com.example.prueba.controller;
 
 
 import com.example.prueba.entity.Options;
+import com.example.prueba.entity.Question;
 import com.example.prueba.service.OptionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -32,5 +33,10 @@ public class OptionsController {
     @GetMapping("api/options/{idQuestion}")
     public List<Object> getOptions(@PathVariable("idQuestion") Long idQuestion) {
         return optionsService.getOptions(idQuestion);
+    }
+
+    @GetMapping("api/options/rightWrong")
+    public List<Options> getRightandWrongOptions(@RequestBody List<Options> Options) {
+       return  optionsService.getRightandWrongOptions(Options);
     }
 }
