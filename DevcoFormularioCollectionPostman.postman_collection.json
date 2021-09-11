@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "0528d3b6-0226-4e62-b4ba-543c66748454",
+		"name": "DevcoFormularioCollectionPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saveCandidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":\"2525\",\r\n \"name\":\"pepito\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/candidate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCandidateById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/candidate/2525",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidate",
+						"2525"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveForm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"Desarrollador\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/form",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCandidateForm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"media\": 3,\r\n    \"form\": {\r\n        \"idForm\": 1\r\n    },\r\n    \"candidate\": {\r\n        \"id\": 2525\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/candidateForm",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidateForm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAnswersForCandidate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"form\": {\r\n        \"idForm\": 1\r\n    },\r\n    \"candidate\": {\r\n        \"id\": 2525\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/candidateForm",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidateForm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveQuestion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"cuanto es 2 + 3\",\r\n    \"form\":{\r\n        \"idForm\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/question",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateQuestion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idQuestion\":2,\r\n    \"description\": \"cuanto 8/4\",\r\n    \"form\":{\r\n        \"idForm\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/question",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getQuestionOfForm",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/questionWithAnswer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"questionWithAnswer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveOptionForQuestion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"description\": \"es 4\",\r\n        \"success\": true,\r\n        \"question\": {\r\n            \"idQuestion\": 2\r\n        }\r\n    },\r\n    {\r\n        \"description\": \"es 5\",\r\n        \"success\": true,\r\n        \"question\": {\r\n            \"idQuestion\": 3\r\n        }\r\n    },\r\n    {\r\n        \"description\": \"es 70\",\r\n        \"success\": false,\r\n        \"question\": {\r\n            \"idQuestion\": 2\r\n        }\r\n    },\r\n    {\r\n        \"description\": \"es 100\",\r\n        \"success\": false,\r\n        \"question\": {\r\n            \"idQuestion\": 3\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/options",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"options"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateOptionForQuestion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idOption\": 3,\r\n      \"description\": \"es 40\",\r\n        \"success\": false,\r\n        \"question\": {\r\n            \"idQuestion\": 2\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/options",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"options"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMedia",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"idOption\": 6,\r\n        \"question\": {\r\n            \"idQuestion\": 2\r\n        }\r\n    },\r\n    {\r\n        \"idOption\": 7,\r\n        \"question\": {\r\n            \"idQuestion\": 3\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/media/options",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"media",
+						"options"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOptions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/options/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"options",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRightWrongOptions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"idOption\": 6\r\n    },\r\n    {\r\n        \"idOption\": 7\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/options/rightWrong",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"options",
+						"rightWrong"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
