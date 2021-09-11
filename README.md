@@ -8,6 +8,9 @@ respuestas correctas e incorrectas. </div>
 
 ![alt text](diagrams/modeloBD.JPG)
 
+## Diagrama de arquitectura
+
+![alt text](diagrams/diagramaDeArquitectura.png)
 ### Tecnologías 🚀
 
 * Spring Boot
@@ -46,9 +49,6 @@ Además se adjunta la colección de postman con las siguientes peticiones:
 <br/>
 ![alt text](diagrams/ColeccionPostman.png)
 
-## Despliegue 📦
-
-El proyecto esta desplegado en heroku, y se puede consumir con el siguiente [link](https://maven.apache.org/)
 
 ## Autores ✒️
 
