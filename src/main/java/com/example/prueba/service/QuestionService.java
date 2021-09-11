@@ -15,8 +15,8 @@ public class QuestionService implements QuestionServiceInterface {
     @Autowired
     QuestionRepository questionRepository;
 
-    public void saveQuestion(Question question) {
-        questionRepository.save(question);
+    public Question saveQuestion(Question question) {
+       return questionRepository.save(question);
     }
 
 

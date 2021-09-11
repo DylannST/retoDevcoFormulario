@@ -19,15 +19,16 @@ public class Form {
     private String description;
 
 
-//    @OneToMany(mappedBy = "form", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-//    private Set<CandidateForm> candidateForms;
-
-
-//    @OneToMany(mappedBy = "form", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-//    private Set<Question> questions;
+    public Form(Long idForm, String description) {
+        this.idForm = idForm;
+        this.description = description;
+    }
 
     public Form() {
     }
 
 
+    public Form(Long idForm) {
+        this.idForm = idForm;
+    }
 }

@@ -15,7 +15,7 @@ public interface QuestionRepository extends CrudRepository<Question, Long> {
             "SET description = ?1\n" +
             "WHERE id_form=?2 AND\n" +
             "id_question=?3", nativeQuery = true)
-    Integer updateQuestion(String description, Long idForm, Long idQuestion);
+    void updateQuestion(String description, Long idForm, Long idQuestion);
 
     @Query(value = "SELECT description FROM question WHERE id_form=?1", nativeQuery = true)
     List<Object> getForIdForm(Long idForm);

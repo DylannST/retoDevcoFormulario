@@ -24,5 +24,8 @@ public class Candidate {
     public Candidate() {
     }
 
-
+    public Candidate(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

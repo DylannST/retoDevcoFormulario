@@ -29,6 +29,7 @@ public class OptionsService implements OptionsServiceInterface {
         );
     }
 
+
     public int getMedia(List<Options> options) {
         Options optionsOri;
         int valorTotal = 0;
@@ -40,7 +41,6 @@ public class OptionsService implements OptionsServiceInterface {
                 valorTotal += -1;
             }
         }
-
 
         return (valorTotal / options.size());
     }

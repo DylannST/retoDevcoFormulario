@@ -6,7 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface CandidateRepository extends CrudRepository<Candidate, Long> {
 
-    @Query(value = "SELECT c.id,c.name from  candidate as c where c.id=?1", nativeQuery = true)
-    Candidate get(String cedula);
+
 
 }

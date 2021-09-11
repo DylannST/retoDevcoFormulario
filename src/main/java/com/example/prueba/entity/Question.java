@@ -28,8 +28,9 @@ public class Question {
     public Question() {
     }
 
-//    @OneToMany(mappedBy = "question", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-//    private Set<Options> options;
-
-
+    public Question(Long idQuestion, String description, Form form) {
+        this.idQuestion = idQuestion;
+        this.description = description;
+        this.form = form;
+    }
 }

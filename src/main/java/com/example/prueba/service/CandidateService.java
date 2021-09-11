@@ -13,8 +13,8 @@ public class CandidateService implements CandidateServiceInterface {
     CandidateRepository candidateRepository;
 
 
-    public Candidate get(String id) {
-        return candidateRepository.get(id);
+    public Candidate get(Long id) {
+        return candidateRepository.findById(id).get();
     }
 
     public Candidate saveCandidate(Candidate candidate) {

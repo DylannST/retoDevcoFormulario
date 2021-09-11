@@ -16,8 +16,8 @@ public class QuestionController {
     QuestionService questionService;
 
     @PostMapping("api/question")
-    public void saveQuestion(@RequestBody Question question) {
-        questionService.saveQuestion(question);
+    public Question saveQuestion(@RequestBody Question question) {
+        return questionService.saveQuestion(question);
     }
 
     @PutMapping("api/question")

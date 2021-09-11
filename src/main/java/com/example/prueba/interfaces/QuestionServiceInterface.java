@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface QuestionServiceInterface {
 
-    void saveQuestion(Question question);
+    Question saveQuestion(Question question);
 
     void updateQuestion(Question questions);
 

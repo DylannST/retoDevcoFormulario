@@ -12,8 +12,9 @@ public class CandidateController {
     @Autowired
     CandidateService candidateService;
 
+
     @GetMapping("api/candidate/{id}")
-    public Candidate getCandidateById(@PathVariable("id") String id) {
+    public Candidate getCandidateById(@PathVariable("id") Long id) {
         return candidateService.get(id);
     }
 

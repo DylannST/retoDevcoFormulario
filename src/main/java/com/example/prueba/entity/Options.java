@@ -30,5 +30,10 @@ public class Options {
     public Options() {
     }
 
-
+    public Options(Long idOption, String description, boolean success, Question question) {
+        this.idOption = idOption;
+        this.description = description;
+        this.success = success;
+        this.question = question;
+    }
 }
