@@ -31,6 +31,9 @@ create database pruebadevcoformulario
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 
 - Java v11
+- Lombok
+- Junit
+- mockito
 
 ### Pruebas unitarias ⌨️
 
