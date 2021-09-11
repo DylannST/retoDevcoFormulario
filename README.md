@@ -8,6 +8,14 @@ respuestas correctas e incorrectas. </div>
 
 ![alt text](diagrams/modeloBD.JPG)
 
+####Nota: 
+**<div style="text-align: justify ">Antes de ejecutar el proyecto se debe de ejecutar el siguiente comando en MySQL, 
+ya con este, el proyecto se encargara de crear las tablas automaticamente, es importante ejecutar tal cual la instrucción
+que se muestra a continuación</div>**  
+```
+create database pruebadevcoformulario
+```
+
 ## Diagrama de arquitectura
 
 ![alt text](diagrams/diagramaDeArquitectura.png)
